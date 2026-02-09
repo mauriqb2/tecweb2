@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mi primer html</title>
+</head>
+<body>
+    <header>
+        <h1>Hola Mundo</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>Bienvenido a mi primer página web. <strong>Estoy aprendiendo HTML</strong> y esto <em><br>
+        es un gran comienzo</em>.</p>
+        <p>Espero poder agregar más contenido y estilos en el futuro.</p>
+        <img src="https://images7.memedroid.com/images/UPLOADED275/660ea954e7feb.jpeg" alt="Imagen de prueba" height="50"><br><br>
+
+        <h2>Formulario</h2>
+    </main>
+    <section>
+        <form action="submitform.php" method="Post">
+            <label>Nombre:</label><br>
+            <input type="text" name="fullname"><br><br>
+
+            <label>Fecha de nacimiento</label><br>
+            <input type="date" name="date"><br><br>
+
+            <label>Selecciona el Sexo</label><br>
+            <input type="radio" value="male" name="sex">Male<br>
+            <input type="radio" value="female" name="sex">Female<br>
+
+            <label>Lenguages de programacion</label>
+            <input type="checkbox" value=".net" name="langcode">.Net<br>
+            <input type="checkbox" value="Java" name="langcode">Java<br>
+            <input type="checkbox" value="C" name="langcode">C<br>
+            <input type="checkbox" value="C++" name="langcode">C++<br>
+            <input type="checkbox" value="C#" name="langcode">C#<br>
+            <input type="checkbox" value="Python" name="langcode">Python<br>
+            <input type="checkbox" value="dart" name="langcode">dart<br>
+            <input type="checkbox" value="PHP" name="langcode">PHP<br>
+            <input type="checkbox" value="Assembler" name="langcode">Assembler<br><br>
+
+            <label>Selecciona una empresa</label><br>
+            <select name="enterprise">
+                <option value="">Seleccione une opcion</option>
+                <option value="assuresoft">AssureSoft</option>
+                <option value="jalasoft">En Jala te la jalan</option>
+                <option value="BreakData">BreakData</option>
+            </select><br><br>
+
+            <label>contrasenia</label><br>
+            <input type="password"><br><br>
+
+            <button type="submit">Enviar formulario</button>
+        </form>
+
+        <iframe src="https://www.youtube.com" width="500"></iframe>
+    </section>
+    <footer>
+        <p>&copy; 2026 Mi Primer HTML. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+{
+    "fullname": "pepe gonzales",
+    "date": "15-03-97",
+    "sex": "male",
+    "langcode": {
+
+    }
+}
