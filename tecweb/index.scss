@@ -1,0 +1,75 @@
+@use 'variables';
+@use 'buttons';
+@use 'sass:color';
+
+.highlight {
+    color: color.mix(#ff0000,#3700ff, 50%);
+}
+
+%underline {
+    text-decoration: underline;
+}
+
+.linethrough {
+    text-decoration: line-through;
+}
+
+.overline {
+    text-decoration: overline;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.arial {
+    @extend %underline;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    @include buttons.button-base();
+    a {
+        color: black;
+        margin: 0;
+        padding: 0;
+    }
+    &:hover {
+        background-color: white;
+    }
+    &::after{
+        content: "after";
+    }
+    &-content {
+        color: black;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.box {
+    border: 2px solid black;
+    width: 400px;
+    height: 400px;
+    background-color: variables.$principal-color;
+    margin: 25px;
+    padding: 25px;
+}
+
+.box-margin {
+    border: 2px solid black;
+    background-color: variables.$principal-color;
+    width: fit-content;
+    height: fit-content;
+}
+
+.box-padding {
+    border: 2px solid black;
+    background-color: variables.$principal-color;
+    width: 100%;
+    height: 100%;
+}
