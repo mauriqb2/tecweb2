@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Práctica de JavaScript - Interactividad</title>
+  <link rel="stylesheet" href="dist/css/main.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <p class="eyebrow">Práctica de Interactividad</p>
+      <h1 id="titulo" class="card__title">Bienvenidos a JavaScript</h1>
+      <p class="card__description">
+        Escribe tu nombre y utiliza los botones para ver cómo JavaScript puede
+        modificar contenido, clases, estilos y elementos del DOM.
+      </p>
+
+      <div class="form-area">
+        <label for="nombre" class="form-area__label">Nombre del estudiante</label>
+        <input
+          type="text"
+          id="nombre"
+          class="form-area__input"
+          placeholder="Escribe tu nombre"
+        />
+      </div>
+
+      <div class="actions">
+        <button id="btnMostrar" class="btn btn--primary" type="button">
+          Mostrar nombre
+        </button>
+        <button id="btnCambiarTitulo" class="btn btn--secondary" type="button">
+          Cambiar título
+        </button>
+        <button id="btnColor" class="btn btn--accent" type="button">
+          Cambiar color
+        </button>
+        <button id="btnAgregar" class="btn btn--dark" type="button">
+          Agregar mensaje
+        </button>
+        <button id="btnLimpiar" class="btn btn--light" type="button">
+          Limpiar
+        </button>
+      </div>
+
+      <div id="caja" class="demo-box">
+        <p class="demo-box__text">Caja de demostración</p>
+      </div>
+
+      <div id="mensaje" class="message">
+        Aquí aparecerán los mensajes dinámicos.
+      </div>
+
+      <div class="list-section">
+        <h2 class="list-section__title">Mensajes agregados</h2>
+        <div id="listaMensajes" class="list-section__content"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

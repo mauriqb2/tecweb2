@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UCB DevLab</title>
+  <link rel="stylesheet" href="dist/css/main.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <div class="brand">
+        <span class="brand__mark">◎</span>
+        <span class="brand__name">UCB DevLab</span>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-controls="nav" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="sr-only">Abrir menú</span>
+      </button>
+
+      <nav id="nav" class="nav">
+        <a class="nav__link" href="#inicio">Inicio</a>
+        <a class="nav__link" href="#cursos">Cursos</a>
+        <a class="nav__link" href="#beneficios">Beneficios</a>
+        <a class="nav__link" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section id="inicio" class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="pill">Frontend • SASS • Flexbox</p>
+          <h1 class="hero__title">Aprende a construir interfaces modernas, rápidas y bonitas.</h1>
+          <p class="hero__text">
+            UCB DevLab es un laboratorio práctico. Menos teoría eterna, más hacer cosas que se ven pro.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contacto">Inscribirme</a>
+            <a class="btn btn--ghost" href="#cursos">Ver cursos</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <span class="stat__num">6</span>
+              <span class="stat__label">Módulos</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">2</span>
+              <span class="stat__label">Proyectos</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">∞</span>
+              <span class="stat__label">Café</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <div class="card-visual">
+            <div class="card-visual__top"></div>
+            <div class="card-visual__row"></div>
+            <div class="card-visual__row"></div>
+            <div class="card-visual__row short"></div>
+          </div>
+
+          <p class="hero__hint">
+            Tip: compila SASS con <code>npm run watch:sass</code> y mira los cambios en vivo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cursos" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Cursos</h2>
+          <p class="section__subtitle">Tarjetas con Flexbox + hover + animaciones suaves.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="card__icon">🎨</div>
+            <h3 class="card__title">Diseño UI básico</h3>
+            <p class="card__text">Tipografía, espacios, contraste y jerarquía visual.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">📦</div>
+            <h3 class="card__title">Layout Flexbox</h3>
+            <p class="card__text">Distribuye y alinea sin pelearte con margins eternos.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🧩</div>
+            <h3 class="card__title">Componentes</h3>
+            <p class="card__text">Botones, cards, badges: estilos reutilizables.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">⚡</div>
+            <h3 class="card__title">Performance</h3>
+            <p class="card__text">Buenas prácticas para cargar rápido y verse bien.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🧠</div>
+            <h3 class="card__title">SASS Pro</h3>
+            <p class="card__text">Variables, mixins, parciales y estructura profesional.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">✅</div>
+            <h3 class="card__title">Accesibilidad</h3>
+            <p class="card__text">Focus visible, semántica, y navegación clara.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Beneficios</h2>
+          <p class="section__subtitle">Una lista “limpia” con estilos modernos.</p>
+        </div>
+
+        <ul class="benefits">
+          <li class="benefit">✅ Layout responsive listo para móvil</li>
+          <li class="benefit">✅ Animaciones suaves (sin marear)</li>
+          <li class="benefit">✅ SASS organizado por módulos</li>
+          <li class="benefit">✅ Componentes reutilizables</li>
+          <li class="benefit">✅ Buenas prácticas de accesibilidad</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Contacto</h2>
+          <p class="section__subtitle">Formulario con focus visible y validación básica HTML.</p>
+        </div>
+
+        <form class="form" action="#" method="post">
+          <div class="form__row">
+            <label class="label" for="name">Nombre</label>
+            <input class="input" id="name" name="name" type="text" placeholder="Tu nombre" required />
+          </div>
+
+          <div class="form__row">
+            <label class="label" for="email">Email</label>
+            <input class="input" id="email" name="email" type="email" placeholder="tucorreo@ucb.bo" required />
+          </div>
+
+          <div class="form__row">
+            <label class="label" for="msg">Mensaje</label>
+            <textarea class="input input--area" id="msg" name="msg" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+          </div>
+
+          <button class="btn btn--primary" type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p>Tecnologías Web II — SIS-215</p>
+      <p class="muted">Hecho con HTML + SASS + Flexbox</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

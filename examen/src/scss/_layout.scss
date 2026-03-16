@@ -1,0 +1,95 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(12px);
+  background: rgba(11, 18, 32, 0.72);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  z-index: 50;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: v.$space-3 0;
+  gap: v.$space-3;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: v.$space-2;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+.brand__mark {
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  background: rgba(124,92,255,.18);
+  border: 1px solid rgba(124,92,255,.35);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: v.$space-3;
+}
+.nav__link {
+  color: v.$muted;
+  padding: 10px 10px;
+  border-radius: 12px;
+  transition: background-color .18s ease, color .18s ease;
+}
+.nav__link:hover {
+  background: rgba(255,255,255,.06);
+  color: v.$text;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 14px;
+  padding: 10px;
+  cursor: pointer;
+}
+.nav-toggle__bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: v.$text;
+  margin: 5px 0;
+  opacity: .9;
+  border-radius: 2px;
+}
+
+@include m.respond(md) {
+  .nav-toggle { display: block; }
+  .nav {
+    position: absolute;
+    right: 4%;
+    top: 64px;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 220px;
+    padding: v.$space-2;
+    background: rgba(11, 18, 32, 0.92);
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: v.$radius;
+    box-shadow: v.$shadow;
+    transform-origin: top right;
+    transform: scale(0.98);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .16s ease, transform .16s ease;
+  }
+  .nav.is-open {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+}
